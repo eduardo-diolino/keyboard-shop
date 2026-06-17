@@ -1,18 +1,20 @@
-# keyboard-shop
-This is a project I developed to train my web development skills. The objective was to create a professional landing page for the "Logix Chaves MX S" keyboard, focusing on a clean and modern design.
-🚀 Logix Chaves MX S - Landing Page
-Uma interface moderna e minimalista para apresentação de produto.
+<div align="center">
+<img width="1200" height="475" alt="GHBanner" src="https://ai.google.dev/static/site-assets/images/share-ais-513315318.png" />
+</div>
 
-💡 Sobre o projeto
-Este projeto foi desenvolvido para aprimorar minhas habilidades em Front-end e UI/UX Design. A proposta foi criar uma página elegante para o teclado "Logix Chaves MX S", focando em:
+# Run and deploy your AI Studio app
 
-Layout limpo e organizado.
+This contains everything you need to run your app locally.
 
-Interação fluida com o usuário.
+View your app in AI Studio: https://ai.studio/apps/6e58b497-b96d-431d-b5e6-3c154228055c
 
-Estrutura de apresentação de hardware de alto nível.
+## Run Locally
 
-🛠️ Tecnologias
-Framework: Vite + TypeScript
+**Prerequisites:**  Node.js
 
-Estilização: CSS moderno e estruturação responsiva.
+
+1. Install dependencies:
+   `npm install`
+2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
+3. Run the app:
+   `npm run dev`

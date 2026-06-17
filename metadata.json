@@ -1,0 +1,6 @@
+{
+  "name": "Advanced Wireless Keyboard Landing Page",
+  "description": "A premium product landing page for the high-end advanced wireless keyboard, featuring interactive components, backlighting customization, typing sounds simulator, and exploded-view hardware showcase.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
