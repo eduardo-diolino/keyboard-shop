@@ -13,6 +13,8 @@ import {
 } from "lucide-react";
 import { useLanguage } from "../context/LanguageContext";
 import { useTheme } from "../context/ThemeContext";
+import heroVideo from "../assets/images/firefly.mp4.mp4";
+import heroPoster from "../assets/images/mx_keys_hero_1781635602955.jpg";
 
 export default function Hero() {
   const videoRef = useRef<HTMLVideoElement>(null);
@@ -21,11 +23,20 @@ export default function Hero() {
 
   // Play immediately and ensure loop and muted states are enforced
   useEffect(() => {
-    if (videoRef.current) {
-      videoRef.current.play().catch((err) => {
-        console.log("Autoplay context waiting for user action:", err);
-      });
-    }
+    const video = videoRef.current;
+
+    if (!video) return;
+
+    const startPlayback = async () => {
+      video.muted = true;
+      try {
+        await video.play();
+      } catch (err) {
+        console.info("Autoplay unavailable for the hero video:", err);
+      }
+    };
+
+    startPlayback();
   }, []);
 
   const handlePreOrder = () => {
@@ -48,20 +59,15 @@ export default function Hero() {
           loop
           muted
           playsInline
+          preload="auto"
+          poster={heroPoster}
           className={`w-full h-full object-cover transition-all duration-1000 ${
             theme === "dark"
               ? "opacity-[0.55] filter contrast-110 saturate-[0.90] brightness-[0.85]"
               : "opacity-[0.62] mix-blend-multiply filter contrast-112 saturate-[0.85] brightness-[1.01]"
           }`}
         >
-          {/* High-Fidelity deconstructed keyboard video */}
-          <source src="/src/assets/images/firefly.mp4.mp4" type="video/mp4" />
-          <source src="/firefly.mp4" type="video/mp4" />
-          <source src="/assets/firefly.mp4" type="video/mp4" />
-          <source src="/assets/video_0.mp4" type="video/mp4" />
-          <source src="/video_0.mp4" type="video/mp4" />
-          <source src="/recording_0.mp4" type="video/mp4" />
-          <source src="/assets/recording_0.mp4" type="video/mp4" />
+          <source src={heroVideo} type="video/mp4" />
           <source src="https://assets.mixkit.co/videos/preview/mixkit-close-up-of-hands-typing-on-a-computer-keyboard-43085-large.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
