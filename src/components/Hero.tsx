@@ -129,7 +129,7 @@ export default function Hero() {
             theme === "dark" ? "text-white" : "text-zinc-950"
           }`}
         >
-          {t("Precision Meets", "teclado teste manual")} <br />
+          {t("Precision Meets", "A Precisão Encontra a Performance")} <br />
           <span className={`bg-gradient-to-r bg-clip-text text-transparent duration-300 ${
             theme === "dark" ? "from-white via-zinc-100 to-zinc-500" : "from-zinc-900 via-zinc-800 to-zinc-600"
           }`}>
