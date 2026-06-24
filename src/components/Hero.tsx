@@ -133,7 +133,7 @@ export default function Hero() {
           <span className={`bg-gradient-to-r bg-clip-text text-transparent duration-300 ${
             theme === "dark" ? "from-white via-zinc-100 to-zinc-500" : "from-zinc-900 via-zinc-800 to-zinc-600"
           }`}>
-            {t("Performance", "Performance")}
+            {t("Performance")}
           </span>
         </motion.h1>
 
