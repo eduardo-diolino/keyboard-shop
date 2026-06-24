@@ -3,12 +3,15 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
+import heroImage from "./assets/images/mx_keys_hero_1781635602955.jpg";
+import setupImage from "./assets/images/mx_keys_setup_1781635619169.jpg";
+import keycapsImage from "./assets/images/mx_keys_keys_1781635635048.jpg";
 import { Feature, SpecItem, ExplodedLayer, ComparisonProduct, KeyboardSoundPreset } from "./types";
 
 export const IMAGES = {
-  hero: "/src/assets/images/mx_keys_hero_1781635602955.jpg",
-  setup: "/src/assets/images/mx_keys_setup_1781635619169.jpg",
-  keycaps: "/src/assets/images/mx_keys_keys_1781635635048.jpg",
+  hero: heroImage,
+  setup: setupImage,
+  keycaps: keycapsImage,
 };
 
 export const COLOR_VARIANTS = [
